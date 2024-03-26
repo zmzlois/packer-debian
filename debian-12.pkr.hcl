@@ -1,4 +1,5 @@
 
+
 packer {
   required_plugins {
     qemu = {
@@ -7,7 +8,6 @@ packer {
     }
   }
 }
-
 
 variable "kubernetes_major" {
   type = string
@@ -21,12 +21,12 @@ variable "kubernetes_minor" {
 
 variable "boot_wait" {
   type    = string
-  default = "10s"
+  default = "5s"
 }
 
 variable "disk_size" {
   type    = string
-  default = "400G"
+  default = "4G"
 }
 
 variable "headless" {
@@ -46,7 +46,7 @@ variable "iso_base_url" {
 
 variable "numvcpus" {
   type    = string
-  default = "4"
+  default = "1"
 }
 
 source "qemu" "debian" {
